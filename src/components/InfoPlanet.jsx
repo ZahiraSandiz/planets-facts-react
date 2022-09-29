@@ -5,6 +5,9 @@ const container = css`
   display: flex;
   flex-direction: column;
   gap: 23px;
+  @media (max-width: 900px) {
+    width: 49%;
+  }
 `;
 
 const namePlanet = css`
@@ -13,6 +16,10 @@ const namePlanet = css`
   font-size: 80px;
   line-height: 104px;
   color: #ffffff;
+  @media (max-width: 900px) {
+    font-size: 48px;
+    line-height: 62px;
+  }
 `;
 
 const text = css`
@@ -21,6 +28,10 @@ const text = css`
   font-size: 14px;
   line-height: 25px;
   color: #ffffff;
+  @media (max-width: 900px) {
+    font-size: 11px;
+    line-height: 22px;
+  }
 `;
 
 const link = css`
@@ -32,6 +43,9 @@ const link = css`
   text-decoration: none;
   display: flex;
   gap: 8px;
+  @media (max-width: 900px) {
+    font-size: 12px;
+  }
 `;
 
 const source = css`

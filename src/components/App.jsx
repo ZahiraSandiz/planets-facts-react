@@ -3,7 +3,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 
-const contentContainer = css`
+const contentContainer = css` d
   margin: 0;
   padding: 0;
   min-width: 320px;

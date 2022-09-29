@@ -3,9 +3,17 @@ import ButtonsInfo from "./ButtonsInfo";
 import InfoPlanet from "./InfoPlanet";
 
 const container = css`
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 39px;
+  @media (max-width: 900px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 69px;
+  }
 `;
 
 const ContainInfoPlanet = () => {

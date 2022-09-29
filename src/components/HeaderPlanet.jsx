@@ -4,12 +4,12 @@ const wrap = css``;
 
 const text = css`
   font-family: "League Spartan";
-  font-style: normal;
   font-weight: 700;
   font-size: 11px;
   letter-spacing: 1px;
   color: #ffffff;
   text-decoration: none;
+  letter-spacing: 1px;
 `;
 
 function HeaderPlanet(props) {

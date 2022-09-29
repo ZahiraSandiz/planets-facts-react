@@ -7,6 +7,10 @@ const container = css`
   flex-direction: column;
   width: 100%;
   gap: 16px;
+  @media (max-width: 900px) {
+    width: 40%;
+    gap: 14px;
+  }
 `;
 
 const ButtonsInfo = () => {

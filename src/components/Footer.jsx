@@ -4,9 +4,17 @@ import CardInfoFooter from "./CardInfoFooter";
 
 const footer = css`
   display: flex;
-  padding: 0 165px 56px 165px;
+  padding: 0 11.5% 56px 11.5%;
   gap: 30px;
   justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    gap: 11px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 0px 5.2% 36px 5.2%;
+  }
 `;
 
 const Footer = () => {

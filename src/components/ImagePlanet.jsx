@@ -9,10 +9,16 @@ const container = css`
   justify-content: center;
 `;
 
+const styleImage = css`
+  @media (max-width: 900px) {
+    width: 148px;
+    height: 148px;
+  }
+`;
 const ImagePlanet = () => {
   return (
     <div css={container}>
-      <img src={image} alt="Mercury" />
+      <img src={image} alt="" css={styleImage} />
     </div>
   );
 };

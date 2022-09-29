@@ -3,10 +3,16 @@ import ImagePlanet from "./ImagePlanet";
 import ContainInfoPlanet from "./ContainInfoPlanet";
 
 const content = css`
-  margin: 126px 165px 87px 35px;
+  padding: 126px 11.5% 87px 11.5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 146px 5.2% 27px 5.2%;
+    gap: 130px;
+  }
 `;
 
 const Content = () => {

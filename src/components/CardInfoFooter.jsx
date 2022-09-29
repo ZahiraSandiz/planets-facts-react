@@ -7,8 +7,13 @@ const card = css`
   padding: 20px 23px 27px 23px;
   width: 255px;
   min-width: 190px;
-
+  height: 128px;
   gap: 4px;
+  @media (max-width: 1200px) {
+    min-width: 120px;
+    padding: 16px 15px 19px 15px;
+    height: 88px;
+  }
 `;
 
 const styleTitle = css`
@@ -18,6 +23,10 @@ const styleTitle = css`
   line-height: 25px;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.5);
+  @media (max-width: 1200px) {
+    font-size: 8px;
+    line-height: 16px;
+  }
 `;
 
 const styleDescription = css`
@@ -26,6 +35,12 @@ const styleDescription = css`
   font-size: 40px;
   line-height: 52px;
   letter-spacing: -1.5px;
+
+  @media (max-width: 1200px) {
+    font-size: 24px;
+    letter-spacing: -0.9px;
+    line-height: 31px;
+  }
 `;
 
 const CardInfoFooter = (props) => {

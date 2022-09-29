@@ -7,6 +7,12 @@ const header = css`
   justify-content: space-between;
   padding: 22px 40px 27px 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 32px 0px 27px 0px;
+    gap: 39px;
+  }
 `;
 
 const title = css`
