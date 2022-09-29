@@ -35,7 +35,6 @@ const styleTitle = css`
   @media (max-width: 1200px) {
     font-size: 8px;
     line-height: 16px;
-    padding: 7px 0px 3px 0px;
   }
 `;
 
