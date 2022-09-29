@@ -2,8 +2,9 @@ import { css } from "@emotion/react";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
+import ButtonsInfoMobile from "./ButtonsInfoMobile";
 
-const contentContainer = css` d
+const contentContainer = css`
   margin: 0;
   padding: 0;
   min-width: 320px;
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <div css={contentContainer}>
       <Header />
+      <ButtonsInfoMobile />
 
       <Content />
 

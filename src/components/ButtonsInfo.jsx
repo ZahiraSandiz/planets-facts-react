@@ -6,6 +6,7 @@ const container = css`
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 255px;
   gap: 16px;
   @media (max-width: 900px) {
     width: 40%;

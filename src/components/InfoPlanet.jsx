@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import svgSource from "../assets/icon-source.svg";
 
 const container = css`
   width: 350px;
@@ -42,6 +43,7 @@ const link = css`
   opacity: 0.5;
   text-decoration: none;
   display: flex;
+  align-items: center;
   gap: 8px;
   @media (max-width: 900px) {
     font-size: 12px;
@@ -51,6 +53,11 @@ const link = css`
 const source = css`
   font-weight: 700;
   text-decoration: underline;
+`;
+
+const styleSvgSource = css`
+  width: 12px;
+  height: 12px;
 `;
 
 const InfoPlanet = () => {
@@ -68,7 +75,8 @@ const InfoPlanet = () => {
           <span>Source : </span>
           <span css={source}>Wikipedia</span>
         </div>
-        <span> agreg flechita</span>
+
+        <img css={styleSvgSource} src={svgSource} alt="source" />
       </a>
     </div>
   );

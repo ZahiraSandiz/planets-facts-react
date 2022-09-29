@@ -17,6 +17,8 @@ const styles = css`
     margin: 0;
     color: #f2f2f2;
     background-color: #070724;
+    background-image: url("../assets/background-stars.svg");
+    -webkit-font-smoothing: antialiased;
   }
 `;
 

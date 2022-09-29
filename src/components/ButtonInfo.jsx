@@ -41,6 +41,9 @@ const buttonSelected = css`
   padding-left: 28px;
   gap: 28px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  @media (max-width: 900px) {
+    height: 40px;
+  }
 `;
 
 const ButtonInfo = (props) => {
