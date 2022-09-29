@@ -12,6 +12,9 @@ const container = css`
     width: 40%;
     gap: 14px;
   }
+  @media (max-width: 590px) {
+    display: none;
+  }
 `;
 
 const ButtonsInfo = () => {

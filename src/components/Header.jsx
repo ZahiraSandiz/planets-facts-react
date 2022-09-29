@@ -18,7 +18,7 @@ const header = css`
 
   @media (max-width: 590px) {
     flex-direction: row;
-    padding: 24px 16px;
+    padding: 16px 24px;
   }
 `;
 

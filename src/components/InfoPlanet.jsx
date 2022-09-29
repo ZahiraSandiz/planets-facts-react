@@ -9,6 +9,11 @@ const container = css`
   @media (max-width: 900px) {
     width: 49%;
   }
+  @media (max-width: 590px) {
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+  }
 `;
 
 const namePlanet = css`
@@ -21,6 +26,10 @@ const namePlanet = css`
     font-size: 48px;
     line-height: 62px;
   }
+  @media (max-width: 590px) {
+    font-size: 40px;
+    line-height: 52px;
+  }
 `;
 
 const text = css`
@@ -32,6 +41,11 @@ const text = css`
   @media (max-width: 900px) {
     font-size: 11px;
     line-height: 22px;
+  }
+  @media (max-width: 590px) {
+    font-size: 11px;
+    line-height: 22px;
+    padding-bottom: 16px;
   }
 `;
 

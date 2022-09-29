@@ -11,9 +11,12 @@ const footer = css`
   @media (max-width: 1200px) {
     gap: 11px;
   }
-
   @media (max-width: 900px) {
     padding: 0px 5.2% 36px 5.2%;
+  }
+  @media (max-width: 590px) {
+    padding: 0px 24px 47px 24px;
+    flex-direction: column;
   }
 `;
 

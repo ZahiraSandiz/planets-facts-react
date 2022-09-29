@@ -14,6 +14,15 @@ const card = css`
     padding: 16px 15px 19px 15px;
     height: 88px;
   }
+  @media (max-width: 590px) {
+    flex-direction: row;
+    width: 100%;
+    height: 48px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 24px 13px 24px;
+  }
 `;
 
 const styleTitle = css`
@@ -26,6 +35,7 @@ const styleTitle = css`
   @media (max-width: 1200px) {
     font-size: 8px;
     line-height: 16px;
+    padding: 7px 0px 3px 0px;
   }
 `;
 
@@ -40,6 +50,11 @@ const styleDescription = css`
     font-size: 24px;
     letter-spacing: -0.9px;
     line-height: 31px;
+  }
+  @media (max-width: 590px) {
+    font-size: 20px;
+    letter-spacing: -0.75px;
+    line-height: 26px;
   }
 `;
 

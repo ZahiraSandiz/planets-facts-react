@@ -13,6 +13,10 @@ const content = css`
     padding: 146px 5.2% 27px 5.2%;
     gap: 130px;
   }
+  @media (max-width: 590px) {
+    padding: 95px 24px 28px 24px;
+    gap: 98px;
+  }
 `;
 
 const Content = () => {

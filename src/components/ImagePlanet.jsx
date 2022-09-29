@@ -14,6 +14,10 @@ const styleImage = css`
     width: 148px;
     height: 148px;
   }
+  @media (max-width: 590px) {
+    width: 111px;
+    height: 111px;
+  }
 `;
 const ImagePlanet = () => {
   return (
