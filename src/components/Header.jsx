@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import HeaderPlanets from "./HeaderPlanets";
-import DropdownPlanetsMobile from "./DropdownPlanetsMobile";
+import DropdownMobile from "./DropdownMobile";
 
 const header = css`
   display: flex;
@@ -37,7 +37,7 @@ function Header() {
       <h1 css={title}>THE PLANETS</h1>
       <HeaderPlanets />
 
-      <DropdownPlanetsMobile />
+      <DropdownMobile />
     </header>
   );
 }
