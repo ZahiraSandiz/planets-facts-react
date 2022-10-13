@@ -1,8 +1,15 @@
 import { useParams } from "react-router-dom";
-import planets from "..mocks/planets.json";
+import planets from "../mocks/planets.json";
 
 const Planet = ({}) => {
   const { planet } = useParams();
+
+  const currentPlanet = planets.find(
+    (p) => p.name.toLocaleLowerCase() === planet.toLocaleLowerCase()
+  );
+
+  console.dir(currentPlanet);
+
   return (
     <div>
       <h1>Soy el planeta {planet} y soy el Outlet tambien</h1>
