@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../Layouts/Layout";
 import Content from "../components/Content";
 
 const Mercury = () => {
