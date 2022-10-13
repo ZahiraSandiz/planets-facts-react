@@ -8,6 +8,7 @@ const content = css`
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+
   @media (max-width: 900px) {
     flex-direction: column;
     padding: 146px 5.2% 27px 5.2%;

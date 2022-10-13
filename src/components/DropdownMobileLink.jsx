@@ -8,20 +8,16 @@ const wrapLink = css`
   border-bottom: solid 1px rgba(255, 255, 255, 0.2);
   padding-bottom: 20px;
   cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
 const wrapCircleAndPlanet = css`
   display: flex;
   align-items: end;
   gap: 24px;
-`;
-
-const circle = css`
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: blanchedalmond;
 `;
 
 const namePlanet = css`
@@ -32,8 +28,21 @@ const namePlanet = css`
   color: #ffffff;
 `;
 
+const icon = css`
+  padding-right: 7px;
+`;
+
 const DropdownMobileLink = (promps) => {
   const { planet, color } = promps;
+
+  const circle = css`
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: ${color};
+  `;
+
   return (
     <div css={wrapLink}>
       <div css={wrapCircleAndPlanet}>
@@ -41,7 +50,7 @@ const DropdownMobileLink = (promps) => {
         <span css={namePlanet}>{planet}</span>
       </div>
 
-      <img src={iconChevron} alt="icon chevron " />
+      <img css={icon} src={iconChevron} alt="icon chevron " />
     </div>
   );
 };

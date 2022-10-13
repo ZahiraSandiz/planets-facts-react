@@ -1,31 +1,23 @@
-import { css } from "@emotion/react";
-import Header from "./Header";
-import Content from "./Content";
-import Footer from "./Footer";
-import ButtonsInfoMobile from "./ButtonsInfoMobile";
-
-const contentContainer = css`
-  margin: 0;
-  padding: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-`;
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Mercury from "../pages/Mercury";
+import Venus from "../pages/Venus";
+import Earth from "../pages/Earth";
 
 const App = () => {
   return (
-    <div css={contentContainer}>
-      <Header />
-      <ButtonsInfoMobile />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="mercury" element={<Mercury />} />
+          {/* <Route index element={<Home />} /> */}
 
-      <Content />
+          <Route path="venus" element={<Venus />} />
 
-      <Footer />
-    </div>
+          <Route path="earth" element={<Earth />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

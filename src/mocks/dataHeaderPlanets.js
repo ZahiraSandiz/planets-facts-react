@@ -11,7 +11,7 @@ const dataHeaderPlanets = [
   },
   {
     id: 3,
-    planet: "HEART",
+    planet: "EARTH",
     color: " #545BFE",
   },
 

@@ -6,14 +6,11 @@ const header = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 40px 27px 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   user-select: none;
 
   @media (max-width: 900px) {
     flex-direction: column;
-    padding: 32px 51px 27px;
-    gap: 39px;
   }
 
   @media (max-width: 590px) {
@@ -29,6 +26,20 @@ const title = css`
   line-height: 36px;
   letter-spacing: -1.05px;
   color: rgb(255, 255, 255);
+  padding: 22px 20px 27px 32px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 900px) {
+    padding: 32px 20px 19px 20px;
+  }
+
+  @media (max-width: 590px) {
+    padding: 0;
+  }
 `;
 
 function Header() {

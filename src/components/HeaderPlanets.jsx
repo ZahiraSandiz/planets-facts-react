@@ -5,7 +5,9 @@ import HeaderPlanet from "./HeaderPlanet";
 const container = css`
   display: flex;
   gap: 33px;
+  padding-right: 32px;
   @media (max-width: 900px) {
+    padding: 20px 50px 27px 50px;
     gap: 0;
     justify-content: space-between;
     width: 100%;
@@ -19,8 +21,8 @@ const HeaderPlanets = () => {
   return (
     <div css={container}>
       {dataHeaderPlanets.map((dataPlanet) => {
-        const { id, planet } = dataPlanet;
-        return <HeaderPlanet key={id} planet={planet} />;
+        const { id, planet, color } = dataPlanet;
+        return <HeaderPlanet key={id} planet={planet} color={color} />;
       })}
     </div>
   );

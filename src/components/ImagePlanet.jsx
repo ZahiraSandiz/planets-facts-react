@@ -10,6 +10,18 @@ const container = css`
 `;
 
 const styleImage = css`
+  @keyframes planet-transform {
+    0% {
+      transform: scale(7) rotate(360deg);
+      opacity: 0.1;
+    }
+
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  animation: 0.8s linear 0s 1 normal none running planet-transform;
   @media (max-width: 900px) {
     width: 148px;
     height: 148px;
