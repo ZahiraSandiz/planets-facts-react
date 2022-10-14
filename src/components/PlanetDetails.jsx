@@ -1,5 +1,3 @@
-import { useParams } from "react-router-dom";
-import planetsData from "../mocks/planets.json";
 import ImagePlanet from "./ImagePlanet";
 import ContainInfoPlanet from "./ContainInfoPlanet";
 import { css } from "@emotion/react";
@@ -22,16 +20,9 @@ const content = css`
   }
 `;
 
-const PlanetDetails = () => {
-  // donde estamos? en que planeta estamos? en que ruta estamos? en que url estamos?
-  // es lo que ingreso el usuario luego de /
-  const { planetParam } = useParams();
-
-  const planet = planetsData.find((planetData) => {
-    return (
-      planetData.name.toLocaleLowerCase() === planetParam.toLocaleLowerCase()
-    );
-  });
+const PlanetDetails = (props) => {
+  const { planet } = props;
+  // const planet = props.planet;
 
   return (
     <div>
@@ -39,7 +30,6 @@ const PlanetDetails = () => {
       <div css={content}>
         <ImagePlanet filename={planet.images} />
 
-        {/* TODO: Tratar de rehacer todo el caminito que hicimos para entenderlo.*/}
         <ContainInfoPlanet planet={planet} />
       </div>
     </div>

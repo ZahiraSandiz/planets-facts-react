@@ -20,7 +20,10 @@ const footer = css`
   }
 `;
 
-const Footer = () => {
+const Footer = (props) => {
+  const { planet } = props;
+  // const planet = props.planet;
+
   return (
     <footer css={footer}>
       {dataFooter.map((data) => {
