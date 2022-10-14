@@ -22,11 +22,9 @@ const content = css`
 
 const PlanetDetails = (props) => {
   const { planet } = props;
-  // const planet = props.planet;
 
   return (
     <div>
-      <h1>Soy el planeta {planet.name}</h1>
       <div css={content}>
         <ImagePlanet filename={planet.images} />
 

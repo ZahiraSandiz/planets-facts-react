@@ -17,7 +17,8 @@ const container = css`
   }
 `;
 
-const ButtonsInfo = () => {
+const ButtonsInfo = (props) => {
+  const { planet } = props;
   return (
     <div css={container}>
       {dataButtonsInfo.map((buttonInfo) => {
@@ -29,3 +30,5 @@ const ButtonsInfo = () => {
 };
 
 export default ButtonsInfo;
+
+// traigo los botones acá y les agrego un onclick
