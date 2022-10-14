@@ -74,10 +74,10 @@ const styleSvgSource = css`
   height: 12px;
 `;
 
-const InfoPlanet = () => {
+const InfoPlanet = (planet) => {
   return (
     <div css={container}>
-      <h2 css={namePlanet}>MERCURY</h2>
+      <h2 css={namePlanet}> Soy {planet.name}</h2>
       <p css={text}>
         Mercury is the smallest planet in the Solar System and the closest to
         the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest

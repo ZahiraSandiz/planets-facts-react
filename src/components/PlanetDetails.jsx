@@ -36,11 +36,11 @@ const PlanetDetails = () => {
   return (
     <div>
       <h1>Soy el planeta {planet.name}</h1>
-
       <div css={content}>
-        <ImagePlanet filename={planet.images.geology} />
+        <ImagePlanet filename={planet.images} />
+
         {/* TODO: Tratar de rehacer todo el caminito que hicimos para entenderlo.*/}
-        {/* <ContainInfoPlanet /> */}
+        <ContainInfoPlanet planet={planet} />
       </div>
     </div>
   );

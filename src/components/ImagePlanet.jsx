@@ -21,6 +21,7 @@ const styleImage = css`
   }
 
   animation: 0.8s linear 0s 1 normal none running planet-transform;
+
   @media (max-width: 900px) {
     width: 148px;
     height: 148px;
@@ -30,8 +31,13 @@ const styleImage = css`
     height: 111px;
   }
 `;
+
 const ImagePlanet = ({ filename }) => {
-  const imageUrl = `/src/${filename}`;
+  const imagePlanet = filename.planet;
+  const imageInternal = filename.internal;
+  const imageGeology = filename.geology;
+
+  const imageUrl = `/src/${imagePlanet}`;
 
   return (
     <div css={container}>

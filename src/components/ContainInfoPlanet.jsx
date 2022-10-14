@@ -16,11 +16,11 @@ const container = css`
   }
 `;
 
-const ContainInfoPlanet = () => {
+const ContainInfoPlanet = (planet) => {
   return (
     <div css={container}>
-      <InfoPlanet />
-      <ButtonsInfo />
+      <InfoPlanet planet={planet} />
+      <ButtonsInfo planet={planet} />
     </div>
   );
 };
