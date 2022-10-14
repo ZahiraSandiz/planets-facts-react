@@ -40,13 +40,27 @@ const ContainInfoPlanet = (props) => {
       <InfoPlanet planet={planet} aspect={aspect} />
 
       <div css={wrapButtons}>
-        <ButtonInfo number="01" text="OVERVIEW" setAspect={setAspect} />
         <ButtonInfo
+          id="overview"
+          number="01"
+          text="OVERVIEW"
+          setAspect={setAspect}
+          aspect={aspect}
+        />
+        <ButtonInfo
+          id="structure"
           number="02"
           text="INTERNAL STRUCTURE"
           setAspect={setAspect}
+          aspect={aspect}
         />
-        <ButtonInfo number="03" text="SURFACE GEOLOGY" setAspect={setAspect} />
+        <ButtonInfo
+          id="geology"
+          number="03"
+          text="SURFACE GEOLOGY"
+          setAspect={setAspect}
+          aspect={aspect}
+        />
       </div>
     </div>
   );
