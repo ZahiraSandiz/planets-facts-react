@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import image from "../assets/planet-mercury.svg";
 
 const container = css`
   width: 100%;
@@ -31,10 +30,12 @@ const styleImage = css`
     height: 111px;
   }
 `;
-const ImagePlanet = () => {
+const ImagePlanet = ({ filename }) => {
+  const imageUrl = `/src/${filename}`;
+
   return (
     <div css={container}>
-      <img src={image} alt="" css={styleImage} />
+      <img src={imageUrl} alt="" css={styleImage} />
     </div>
   );
 };

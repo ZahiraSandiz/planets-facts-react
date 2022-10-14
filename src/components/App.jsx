@@ -1,27 +1,33 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../Layouts/Layout";
-import Mercury from "../pages/Mercury";
-import Venus from "../pages/Venus";
-import Earth from "../pages/Earth";
-import Planet from "./Planet";
+import { css } from "@emotion/react";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import Header from "./Header";
+import ButtonsInfoMobile from "./ButtonsInfoMobile";
+import Footer from "./Footer";
+import PlanetDetails from "./PlanetDetails";
+
+const contentContainer = css`
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+`;
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path=":planet" element={<Planet />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div css={contentContainer}>
+      <Header />
+      <ButtonsInfoMobile />
+
+      <PlanetDetails />
+
+      <Footer />
+    </div>
   );
 };
 
 export default App;
-{
-  /* :planet -> al ponerle 2 puntos, lo convierto en un parámetro a la url y lo hace mostrar SIEMPRE el componente PLANET */
-}
-
-{
-  /* useParams(de react router) -> Nos sirve pare acceder al valor que el usuario ingresó -> queremos saber qué ingresó el usuario para saber qué contenido mostrar*/
-}
