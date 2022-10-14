@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import Header from "./Header";
 import ButtonsInfoMobile from "./ButtonsInfoMobile";
 import Footer from "./Footer";

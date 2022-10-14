@@ -16,7 +16,9 @@ const container = css`
   }
 `;
 
-const ContainInfoPlanet = (planet) => {
+const ContainInfoPlanet = (props) => {
+  const { planet } = props;
+
   return (
     <div css={container}>
       <InfoPlanet planet={planet} />
