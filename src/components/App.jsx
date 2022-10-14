@@ -19,7 +19,6 @@ const contentContainer = css`
 `;
 
 const App = () => {
-  // donde estamos? en que planeta estamos? en que ruta estamos? en que url estamos?
   const { planetParam } = useParams();
 
   const planet = planetsData.find((planetData) => {

@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { dataFooter } from "../mocks/dataFooter";
 import CardInfoFooter from "./CardInfoFooter";
 
 const footer = css`
@@ -22,16 +21,13 @@ const footer = css`
 
 const Footer = (props) => {
   const { planet } = props;
-  // const planet = props.planet;
 
   return (
     <footer css={footer}>
-      {dataFooter.map((data) => {
-        const { id, title, description } = data;
-        return (
-          <CardInfoFooter key={id} title={title} description={description} />
-        );
-      })}
+      <CardInfoFooter title="ROTATION TIME" description={planet.rotation} />
+      <CardInfoFooter title="REVOLUTION TIME" description={planet.revolution} />
+      <CardInfoFooter title="RADIUS" description={planet.radius} />
+      <CardInfoFooter title="AVERAGE TEMP." description={planet.temperature} />
     </footer>
   );
 };

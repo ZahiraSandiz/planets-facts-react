@@ -77,14 +77,14 @@ const styleSvgSource = css`
 `;
 
 const InfoPlanet = (props) => {
-  const { planet } = props;
+  const { planet, aspect } = props;
 
   return (
     <div css={container}>
       <h2 css={namePlanet}>{planet.name}</h2>
-      <p css={text}>{planet.overview.content}</p>
+      <p css={text}>{planet[aspect].content}</p>
 
-      <a href={planet.overview.source} target="_blank" css={link}>
+      <a href={planet[aspect].source} target="_blank" css={link}>
         <div>
           <span>Source : </span>
           <span css={source}>Wikipedia</span>

@@ -1,18 +1,5 @@
 import { css } from "@emotion/react";
-
-const button = css`
-  cursor: pointer;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  padding-left: 28px;
-  gap: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  @media (max-width: 900px) {
-    height: 40px;
-    padding-left: 20px;
-  }
-`;
+import { useState } from "react";
 
 const styleText = css`
   font-family: "League Spartan";
@@ -32,24 +19,32 @@ const styleNumber = css`
   color: rgba(255, 255, 255, 0.5);
 `;
 
-const buttonSelected = css`
-  background-color: #419ebb;
-  cursor: pointer;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  padding-left: 28px;
-  gap: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  @media (max-width: 900px) {
-    height: 40px;
-  }
-`;
-
 const ButtonInfo = (props) => {
-  const { number, text } = props;
+  const { number, text, setAspect } = props;
+
+  const button = css`
+    user-select: none;
+    cursor: pointer;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    gap: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #419ebb;
+    @media (max-width: 900px) {
+      height: 40px;
+      padding-left: 20px;
+    }
+  `;
+
   return (
-    <div css={button}>
+    <div
+      css={button}
+      onClick={() => {
+        setAspect({ text });
+      }}
+    >
       <span css={styleNumber}>{number}</span>
       <span css={styleText}>{text}</span>
     </div>
