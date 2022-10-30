@@ -20,7 +20,7 @@ const styleNumber = css`
 `;
 
 const ButtonInfo = (props) => {
-  const { number, text, setAspect, id, aspect } = props;
+  const { number, text, setAspect, id, aspect, backgroundColor } = props;
 
   const button = css`
     user-select: none;
@@ -31,7 +31,7 @@ const ButtonInfo = (props) => {
     padding-left: 28px;
     gap: 28px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: ${aspect === id ? "#419ebb" : "transparent"};
+    background-color: ${aspect === id ? backgroundColor : "transparent"};
     @media (max-width: 900px) {
       height: 40px;
       padding-left: 20px;

@@ -87,7 +87,6 @@ const InfoPlanet = (props) => {
       <a href={planet[aspect].source} target="_blank" css={link}>
         <div>
           <span>Source : </span>
-          <span css={source}>Wikipedia</span>
         </div>
         <img css={styleSvgSource} src={svgSource} alt="source" />
       </a>

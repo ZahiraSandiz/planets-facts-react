@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { useState } from "react";
+import { dataColorsPlanets } from "../mocks/dataColorsPlanets";
 import ButtonInfo from "./ButtonInfo";
 import InfoPlanet from "./InfoPlanet";
 
@@ -16,6 +17,7 @@ const container = css`
     gap: 10%;
   }
 `;
+
 const wrapButtons = css`
   display: flex;
   flex-direction: column;
@@ -35,6 +37,8 @@ const ContainInfoPlanet = (props) => {
   const { planet } = props;
   const [aspect, setAspect] = useState("overview");
 
+  const color = dataColorsPlanets[planet.name];
+
   return (
     <div css={container}>
       <InfoPlanet planet={planet} aspect={aspect} />
@@ -46,6 +50,7 @@ const ContainInfoPlanet = (props) => {
           text="OVERVIEW"
           setAspect={setAspect}
           aspect={aspect}
+          backgroundColor={color}
         />
         <ButtonInfo
           id="structure"
@@ -53,6 +58,7 @@ const ContainInfoPlanet = (props) => {
           text="INTERNAL STRUCTURE"
           setAspect={setAspect}
           aspect={aspect}
+          backgroundColor={color}
         />
         <ButtonInfo
           id="geology"
@@ -60,6 +66,7 @@ const ContainInfoPlanet = (props) => {
           text="SURFACE GEOLOGY"
           setAspect={setAspect}
           aspect={aspect}
+          backgroundColor={color}
         />
       </div>
     </div>
